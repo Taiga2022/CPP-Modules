@@ -1,0 +1,59 @@
+[
+  {
+    "file": "srcs/main.cpp",
+    "arguments": [
+      "/usr/bin/c++",
+      "-Iincludes",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-MMD",
+      "-MP",
+      "-c",
+      "srcs/main.cpp",
+      "-o",
+      "objs/main.o"
+    ],
+    "directory": "/Users/taigashimizu/practice/42/CPP-Modules/CPP-Module-00/ex01",
+    "output": "objs/main.o"
+  },
+  {
+    "file": "srcs/Contact.cpp",
+    "arguments": [
+      "/usr/bin/c++",
+      "-Iincludes",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-MMD",
+      "-MP",
+      "-c",
+      "srcs/Contact.cpp",
+      "-o",
+      "objs/Contact.o"
+    ],
+    "directory": "/Users/taigashimizu/practice/42/CPP-Modules/CPP-Module-00/ex01",
+    "output": "objs/Contact.o"
+  },
+  {
+    "file": "srcs/PhoneBook.cpp",
+    "arguments": [
+      "/usr/bin/c++",
+      "-Iincludes",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-MMD",
+      "-MP",
+      "-c",
+      "srcs/PhoneBook.cpp",
+      "-o",
+      "objs/PhoneBook.o"
+    ],
+    "directory": "/Users/taigashimizu/practice/42/CPP-Modules/CPP-Module-00/ex01",
+    "output": "objs/PhoneBook.o"
+  }
+]
