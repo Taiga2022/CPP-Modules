@@ -1,19 +1,18 @@
 #ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-# include "Contact.hpp"
+#include "Contact.hpp"
 
-class PhoneBook
-{
+class PhoneBook {
 public:
-	PhoneBook();
-	bool addContact();
-	bool searchContacts() const;
+  PhoneBook();
+  bool addContact();
+  bool searchContacts() const;
 
 private:
-	Contact _contacts[8];
-	int _count;
-	int _nextIndex;
+  Contact _contacts[8];
+  int _count;
+  int _nextIndex;
 };
 
 #endif
