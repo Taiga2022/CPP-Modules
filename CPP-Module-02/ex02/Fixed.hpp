@@ -24,19 +24,21 @@ public:
 	bool operator<=(const Fixed &other) const;
 	bool operator==(const Fixed &other) const;
 	bool operator!=(const Fixed &other) const;
+
 	Fixed operator+(const Fixed &other) const;
 	Fixed operator-(const Fixed &other) const;
 	Fixed operator*(const Fixed &other) const;
 	Fixed operator/(const Fixed &other) const;
+
 	Fixed &operator++(void);
 	Fixed operator++(int);
 	Fixed &operator--(void);
 	Fixed operator--(int);
 
-	static Fixed &min(Fixed &first, Fixed &second);
-	static const Fixed &min(const Fixed &first, const Fixed &second);
-	static Fixed &max(Fixed &first, Fixed &second);
-	static const Fixed &max(const Fixed &first, const Fixed &second);
+	static Fixed &min(Fixed &a, Fixed &b);
+	static const Fixed &min(const Fixed &a, const Fixed &b);
+	static Fixed &max(Fixed &a, Fixed &b);
+	static const Fixed &max(const Fixed &a, const Fixed &b);
 
 private:
 	int _rawBits;
