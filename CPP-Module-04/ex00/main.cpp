@@ -11,8 +11,12 @@ int main(void)
 	const Animal *cat = new Cat();
 	std::cout << dog->getType() << std::endl;
 	std::cout << cat->getType() << std::endl;
-	dog->makeSound(); cat->makeSound(); animal->makeSound();
-	delete dog; delete cat; delete animal;
+	dog->makeSound();
+	cat->makeSound();
+	animal->makeSound();
+	delete dog;
+	delete cat;
+	delete animal;
 	const WrongCat wrongCat;
 	const WrongAnimal *wrong = &wrongCat;
 	wrong->makeSound();

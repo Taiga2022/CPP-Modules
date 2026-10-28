@@ -1,11 +1,11 @@
 #ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
-# include <string>
+#include <string>
 
 class ClapTrap
 {
-public:
+  public:
 	ClapTrap(void);
 	ClapTrap(const std::string &name);
 	ClapTrap(const ClapTrap &other);
@@ -15,7 +15,7 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
-protected:
+  protected:
 	std::string _name;
 	unsigned int _hitPoints;
 	unsigned int _energyPoints;

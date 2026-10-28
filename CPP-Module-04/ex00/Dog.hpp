@@ -1,9 +1,9 @@
 #ifndef DOG_HPP
-# define DOG_HPP
-# include "Animal.hpp"
+#define DOG_HPP
+#include "Animal.hpp"
 class Dog : public Animal
 {
-public:
+  public:
 	Dog(void);
 	Dog(const Dog &other);
 	Dog &operator=(const Dog &other);

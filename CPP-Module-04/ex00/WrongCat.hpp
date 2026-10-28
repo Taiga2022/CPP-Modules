@@ -1,9 +1,9 @@
 #ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
-# include "WrongAnimal.hpp"
+#define WRONGCAT_HPP
+#include "WrongAnimal.hpp"
 class WrongCat : public WrongAnimal
 {
-public:
+  public:
 	WrongCat(void);
 	WrongCat(const WrongCat &other);
 	WrongCat &operator=(const WrongCat &other);
