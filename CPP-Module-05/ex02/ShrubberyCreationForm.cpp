@@ -1,9 +1,14 @@
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
+
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &t)
-    : AForm("shrubbery creation", 145, 137), _target(t) {}
+    : AForm("shrubbery creation", 145, 137), _target(t) {
+}
+
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &o)
-    : AForm(o), _target(o._target) {}
+    : AForm(o), _target(o._target) {
+}
+
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &o) {
     if (this != &o) {
         AForm::operator=(o);
@@ -11,7 +16,10 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
     }
     return *this;
 }
-ShrubberyCreationForm::~ShrubberyCreationForm() {}
+
+ShrubberyCreationForm::~ShrubberyCreationForm() {
+}
+
 void ShrubberyCreationForm::executeAction() const {
     std::ofstream f((_target + "_shrubbery").c_str());
     f << "   /\\\n  /**\\\n /****\\\n   ||\n";

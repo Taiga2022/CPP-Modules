@@ -1,6 +1,9 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
-Form::Form() : _name("unnamed"), _signed(false), _signGrade(150), _execGrade(150) {}
+
+Form::Form() : _name("unnamed"), _signed(false), _signGrade(150), _execGrade(150) {
+}
+
 Form::Form(const std::string &n, int s, int e)
     : _name(n), _signed(false), _signGrade(s), _execGrade(e) {
     if (s < 1 || e < 1)
@@ -8,25 +11,50 @@ Form::Form(const std::string &n, int s, int e)
     if (s > 150 || e > 150)
         throw GradeTooLowException();
 }
+
 Form::Form(const Form &o)
-    : _name(o._name), _signed(o._signed), _signGrade(o._signGrade), _execGrade(o._execGrade) {}
+    : _name(o._name), _signed(o._signed), _signGrade(o._signGrade), _execGrade(o._execGrade) {
+}
+
 Form &Form::operator=(const Form &o) {
     if (this != &o)
         _signed = o._signed;
     return *this;
 }
-Form::~Form() {}
-const std::string &Form::getName() const { return _name; }
-bool Form::getSigned() const { return _signed; }
-int Form::getSignGrade() const { return _signGrade; }
-int Form::getExecGrade() const { return _execGrade; }
+
+Form::~Form() {
+}
+
+const std::string &Form::getName() const {
+    return _name;
+}
+
+bool Form::getSigned() const {
+    return _signed;
+}
+
+int Form::getSignGrade() const {
+    return _signGrade;
+}
+
+int Form::getExecGrade() const {
+    return _execGrade;
+}
+
 void Form::beSigned(const Bureaucrat &b) {
     if (b.getGrade() > _signGrade)
         throw GradeTooLowException();
     _signed = true;
 }
-const char *Form::GradeTooHighException::what() const throw() { return "form grade too high"; }
-const char *Form::GradeTooLowException::what() const throw() { return "form grade too low"; }
+
+const char *Form::GradeTooHighException::what() const throw() {
+    return "form grade too high";
+}
+
+const char *Form::GradeTooLowException::what() const throw() {
+    return "form grade too low";
+}
+
 std::ostream &operator<<(std::ostream &o, const Form &f) {
     return o << f.getName() << " (signed: " << (f.getSigned() ? "yes" : "no") << ")";
 }

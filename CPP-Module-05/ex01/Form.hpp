@@ -4,6 +4,7 @@
 #include <ostream>
 #include <string>
 class Bureaucrat;
+
 class Form {
   private:
     const std::string _name;
@@ -22,14 +23,17 @@ class Form {
     int getSignGrade() const;
     int getExecGrade() const;
     void beSigned(const Bureaucrat &);
+
     class GradeTooHighException : public std::exception {
       public:
         virtual const char *what() const throw();
     };
+
     class GradeTooLowException : public std::exception {
       public:
         virtual const char *what() const throw();
     };
 };
+
 std::ostream &operator<<(std::ostream &, const Form &);
 #endif

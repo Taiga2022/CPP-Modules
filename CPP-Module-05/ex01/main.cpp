@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+
 int main() {
     Bureaucrat low("Low", 150);
     Bureaucrat high("High", 1);

@@ -2,6 +2,7 @@
 #define INTERN_HPP
 #include <string>
 class AForm;
+
 class Intern {
   private:
     typedef AForm *(Intern::*Maker)(const std::string &) const;
