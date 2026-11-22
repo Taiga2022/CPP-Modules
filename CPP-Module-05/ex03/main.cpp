@@ -10,9 +10,9 @@ int main() {
     AForm *form = intern.makeForm("robotomy request", "Bender");
 
     if (form != 0) {
-        clerk.executeForm(*form); // unsigned form
+        clerk.executeForm(*form);
         chief.signForm(*form);
-        clerk.executeForm(*form); // insufficient execution grade
+        clerk.executeForm(*form);
         chief.executeForm(*form);
         delete form;
     }
